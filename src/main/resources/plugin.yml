@@ -1,0 +1,7 @@
+name: ItemDisenchanter
+version: 1.0
+author: Cypher101
+main: cypher.itemdisenchanter.start.DisenchanterPlugin
+description: A basic plugin to disenchant Items into Books with a smithing table!
+api-version: 1.18
+commands:
