@@ -11,6 +11,7 @@ import org.bukkit.event.inventory.PrepareSmithingEvent;
 import org.bukkit.inventory.GrindstoneInventory;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.SmithingInventory;
 import org.bukkit.inventory.meta.EnchantmentStorageMeta;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -36,7 +37,7 @@ public class DisenchantListener implements Listener {
 
     @EventHandler
     public void onPrepareSmithing(PrepareSmithingEvent e){
-        Inventory eInv = e.getInventory();
+        SmithingInventory eInv = e.getInventory();
 
         if(eInv == null) return;
         if(eInv.getType()!= InventoryType.SMITHING) return;
@@ -47,7 +48,7 @@ public class DisenchantListener implements Listener {
         }
     }
 
-    public ItemStack buildDisenchantedItem(ItemStack item){
+    private ItemStack buildDisenchantedItem(ItemStack item){
         ItemStack disenchantedItem = item.clone();
 
         if(disenchantedItem.getEnchantments().size()>0){
@@ -60,7 +61,7 @@ public class DisenchantListener implements Listener {
         return disenchantedItem;
     }
 
-    public ItemStack buildEnchantedBook(ItemStack basedOnItem){
+    private ItemStack buildEnchantedBook(ItemStack basedOnItem){
         ItemStack enchantedItem = basedOnItem.clone();
         ItemStack book = new ItemStack(Material.ENCHANTED_BOOK, 1);
         EnchantmentStorageMeta bookmeta = (EnchantmentStorageMeta) book.getItemMeta();
