@@ -4,7 +4,7 @@
 A lightweight Minecraft plugin to enable transferring enchantments from an item to a book.
 
 ## Installation
-Download the jar from [here](https://github.com/N15A8/ItemDisenchanter/tree/master/result) and put it into your server's plugin folder.
+Download the jar from [here](https://github.com/N15A8/ItemDisenchanter/releases/tag/v1.0) and put it into your server's plugin folder.
 
 ## Usage
 Put an enchanted item and a regular book into a smithing table. This produces an enchanted book with all the enchantments of the item.
